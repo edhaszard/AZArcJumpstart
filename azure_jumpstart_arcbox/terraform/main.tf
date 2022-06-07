@@ -2,19 +2,33 @@
 ## TERRAFORM CLOUD DETAILS (Only used for remote apply with Terraform Cloud)
 #################################################
 terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "3.9.0"
+  backend "remote" {
+    organization = "haszbro2"
+    workspaces {
+      name = "AZArcJumpstart"
     }
   }
+  
+  required_providers {
+    azurerm = "3.9.0"
+  }
+}
+
+###################
+## BAD CODE ZONE ##
+###################
+  #required_providers {
+  #  azurerm = {
+  #    source = "hashicorp/azurerm"
+  #    version = "3.9.0"
+  #  }
+  #}
   #backend "remote" {
   #  organization = "haszbro2"
   #  workspaces {
   #    name = "AZArcJumpstart"
   #  }
   #}
-}
 
 provider "azurerm" {
   features {}

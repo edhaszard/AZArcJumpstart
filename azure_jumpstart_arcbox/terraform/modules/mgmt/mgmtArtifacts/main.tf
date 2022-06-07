@@ -124,7 +124,7 @@ resource "azurerm_network_security_rule" "allow_k8s_80" {
   source_address_prefix       = "*"
   destination_port_range      = "80"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -138,7 +138,7 @@ resource "azurerm_network_security_rule" "allow_k8s_8080" {
   source_address_prefix       = "*"
   destination_port_range      = "8080"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -152,7 +152,7 @@ resource "azurerm_network_security_rule" "allow_k8s_443" {
   source_address_prefix       = "*"
   destination_port_range      = "443"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -166,7 +166,7 @@ resource "azurerm_network_security_rule" "allow_k8s_kubelet" {
   source_address_prefix       = "*"
   destination_port_range      = "10250"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -180,7 +180,7 @@ resource "azurerm_network_security_rule" "allow_traefik_lb_external" {
   source_address_prefix       = "*"
   destination_port_range      = "32323"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -194,7 +194,7 @@ resource "azurerm_network_security_rule" "allow_SQLMI_traffic" {
   source_address_prefix       = "*"
   destination_port_range      = "11433"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -208,7 +208,7 @@ resource "azurerm_network_security_rule" "allow_Postgresql_traffic" {
   source_address_prefix       = "*"
   destination_port_range      = "15432"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -223,7 +223,7 @@ resource "azurerm_network_security_rule" "bastion_allow_https_inbound" {
   source_address_prefix       = "Internet"
   destination_port_range      = "443"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -238,7 +238,7 @@ resource "azurerm_network_security_rule" "bastion_allow_gateway_manager_inbound"
   source_address_prefix       = "GatewayManager"
   destination_port_range      = "443"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -253,7 +253,7 @@ resource "azurerm_network_security_rule" "bastion_allow_load_balancer_inbound" {
   source_address_prefix       = "AzureLoadBalancer"
   destination_port_range      = "443"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Inbound"
   destination_address_prefix  = "*"
   resource_group_name         = data.azurerm_resource_group.rg.name
@@ -298,7 +298,7 @@ resource "azurerm_network_security_rule" "bastion_allow_azure_cloud_outbound" {
   source_address_prefix       = "*"
   destination_port_range      = "443"
   source_port_range           = "*"
-  protocol                    = "TCP"
+  protocol                    = "Tcp"
   direction                   = "Outbound"
   destination_address_prefix  = "AzureCloud"
   resource_group_name         = data.azurerm_resource_group.rg.name

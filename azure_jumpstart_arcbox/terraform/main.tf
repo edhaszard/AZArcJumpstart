@@ -8,12 +8,12 @@ terraform {
       version = "3.9.0"
     }
   }
-  backend "remote" {
-    organization = "haszbro2"
-    workspaces {
-      name = "AZArcJumpstart"
-    }
-  }
+  #backend "remote" {
+  #  organization = "haszbro2"
+  #  workspaces {
+  #    name = "AZArcJumpstart"
+  #  }
+  #}
 }
 
 provider "azurerm" {

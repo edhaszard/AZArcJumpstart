@@ -96,16 +96,6 @@ variable "spn_tenant_id" {
   description = "Arc Service Principal tenantID."
 }
 
-variable "vm_admin_username" {
-  type        = string
-  description = "VM admin username"
-}
-
-variable "user_ip_address" {
-  type        = string
-  description = "External IP address"
-}
-
 variable "client_admin_username" {
   type        = string
   description = "Username for the client virtual machine."

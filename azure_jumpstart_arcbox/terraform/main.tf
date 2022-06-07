@@ -33,9 +33,9 @@ provider "azurerm" {
 #  }
 #}
 
-provider "azurerm" {
-  features {}
-}
+#provider "azurerm" {
+#  features {}
+#}
 
 ###################
 ## BAD CODE ZONE ##

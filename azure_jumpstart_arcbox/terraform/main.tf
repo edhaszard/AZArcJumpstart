@@ -16,9 +16,9 @@ terraform {
   }
 }
 
-provider "azurerm" {
-  features {}
-}
+#provider "azurerm" {
+#  features {}
+#}
 
 variable "azure_location" {
   type        = string

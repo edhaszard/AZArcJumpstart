@@ -10,8 +10,15 @@ terraform {
   }
   
   required_providers {
-    azurerm = "3.9.0"
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.9.0"
+    }
   }
+}
+
+provider "azurerm" {
+  features {}
 }
 
 ###################
@@ -29,10 +36,6 @@ terraform {
   #    name = "AZArcJumpstart"
   #  }
   #}
-
-provider "azurerm" {
-  features {}
-}
 
 variable "azure_location" {
   type        = string

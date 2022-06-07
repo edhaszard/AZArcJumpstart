@@ -6,7 +6,6 @@ terraform {
     azurerm = {
       source = "hashicorp/azurerm"
       version = "3.9.0"
-      features {}
     }
   }
   backend "remote" {
@@ -17,9 +16,9 @@ terraform {
   }
 }
 
-#provider "azurerm" {
-#  features {}
-#}
+provider "azurerm" {
+  features {}
+}
 
 variable "azure_location" {
   type        = string

@@ -65,19 +65,19 @@ variable "workspace_name" {
 variable "github_username" {
   type        = string
   description = "User's github account where they have forked https://github.com/microsoft/azure-arc-jumpstart-apps"
-  default     = "microsoft"
+  default     = "edhaszard"
 }
 
 variable "github_repo" {
   type        = string
   description = "Specify a GitHub repo (used for testing purposes)"
-  default     = "edhaszard"
+  default     = ""
 }
 
 variable "github_branch" {
   type        = string
   description = "Specify a GitHub branch (used for testing purposes)"
-  default     = "main"
+  default     = "AZArcJumpstart"
 }
 
 variable "spn_client_id" {

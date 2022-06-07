@@ -1,13 +1,16 @@
-# Configure the Azure provider
+#################################################
+## TERRAFORM CLOUD DETAILS (Only used for remote apply with Terraform Cloud)
+#################################################
 terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 2.65"
+  backend "remote" {
+    organization = "haszbro2"
+    workspaces {
+      name = "AZArcJumpstart"
     }
   }
-
-  required_version = ">= 0.14.9"
+    required_providers {
+    azurerm = "2.50"
+  }
 }
 
 provider "azurerm" {

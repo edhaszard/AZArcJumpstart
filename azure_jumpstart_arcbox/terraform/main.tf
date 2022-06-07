@@ -119,21 +119,22 @@ variable "github_branch" {
   default     = "AZArcJumpstart"
 }
 
-variable "spn_client_id" {
-  type        = string
-  description = "Arc Service Principal clientID."
-}
-
-variable "spn_client_secret" {
-  type        = string
-  description = "Arc Service Principal client secret."
-  sensitive   = true
-}
-
-variable "spn_tenant_id" {
-  type        = string
-  description = "Arc Service Principal tenantID."
-}
+# removing this section & trying it in ENV variables in TF cloud instead
+#variable "spn_client_id" {
+#  type        = string
+#  description = "Arc Service Principal clientID."
+#}
+#
+#variable "spn_client_secret" {
+#  type        = string
+#  description = "Arc Service Principal client secret."
+#  sensitive   = true
+#}
+#
+#variable "spn_tenant_id" {
+#  type        = string
+#  description = "Arc Service Principal tenantID."
+#}
 
 variable "client_admin_username" {
   type        = string

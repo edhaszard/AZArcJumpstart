@@ -71,7 +71,7 @@ variable "github_username" {
 variable "github_repo" {
   type        = string
   description = "Specify a GitHub repo (used for testing purposes)"
-  default     = "microsoft"
+  default     = "edhaszard"
 }
 
 variable "github_branch" {
@@ -94,6 +94,16 @@ variable "spn_client_secret" {
 variable "spn_tenant_id" {
   type        = string
   description = "Arc Service Principal tenantID."
+}
+
+variable "vm_admin_username" {
+  type        = string
+  description = "VM admin username"
+}
+
+variable "user_ip_address" {
+  type        = string
+  description = "External IP address"
 }
 
 variable "client_admin_username" {

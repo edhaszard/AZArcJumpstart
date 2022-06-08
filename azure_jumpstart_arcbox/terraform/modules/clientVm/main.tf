@@ -50,6 +50,7 @@ variable "subnet_name" {
 variable "template_base_url" {
   type        = string
   description = "Base URL for the GitHub repo where the ArcBox artifacts are located."
+  default = "https://github.com/edhaszard/AZArcJumpstart/tree/373422ddd2984f74a0d68a68e4b2f67cfdcac75d/azure_jumpstart_arcbox"
 }
 
 variable "data_controller_username" {
